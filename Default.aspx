@@ -39,12 +39,13 @@
         </asp:SqlDataSource>
     
         <br />
+        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/NewRecipe.aspx">New Recipe</asp:HyperLink>
         <br />
-        <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="recipe_name" DataSourceID="sql_hw6">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="recipe_name" DataSourceID="sql_hw6">
             <Columns>
                 <asp:BoundField DataField="recipe_name" HeaderText="Recipe Name" ReadOnly="True" SortExpression="recipe_name" />
                 <asp:BoundField DataField="submit_name" HeaderText="Submitted By" SortExpression="submit_name" />
-                <asp:CommandField HeaderText="Submitted By" ShowSelectButton="True" />
+                <asp:HyperLinkField DataNavigateUrlFields="recipe_name" DataNavigateUrlFormatString="details_view.aspx?recipe_name={0}" HeaderText="Submitted By" Text="Select" />
             </Columns>
         </asp:GridView>
     
