@@ -6,10 +6,11 @@ Partial Class detailsView
     
 
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
-        dataView.Focus()
+        FormView1.Focus()
     End Sub
 
-    Protected Sub dataView_ItemInserted(sender As Object, e As DetailsViewInsertedEventArgs) Handles dataView.ItemInserted
+ 
+    Protected Sub FormView1_ItemInserted(sender As Object, e As FormViewInsertedEventArgs) Handles FormView1.ItemInserted
         Response.Redirect("~/Default.aspx")
     End Sub
 End Class

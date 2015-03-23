@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link rel="stylesheet" type="text/css" href="~/css/StyleSheet.css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -37,22 +38,110 @@
                 <asp:Parameter Name="recipe_name" Type="String" />
             </UpdateParameters>
         </asp:SqlDataSource>
+        <asp:FormView ID="FormView1" runat="server" DataKeyNames="recipe_name" DataSourceID="Sql_HW6dataView" DefaultMode="Insert" Width="529px">
+            <EditItemTemplate>
+             </EditItemTemplate>
+            <InsertItemTemplate>
+                <table>
+                    <tr>
+                        <td style="text-align:right;">
+                            Recipe Name
+                        </td>
+                        <td style="text-align:left;">
+                            <asp:TextBox ID="tb_recipeName" runat="server" Text='<%# Bind("recipe_name") %>' />
+                        </td>
+                         <td style="text-align:left;">
+                             <asp:RequiredFieldValidator ID="rfv_recipeName" runat="server" ErrorMessage="Please enter the receipe name" CssClass="validatorError" ControlToValidate="tb_recipeName"></asp:RequiredFieldValidator>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right;">
+                            Submitted By
+                        </td>
+                        <td style="text-align:left;">
+                             <asp:TextBox ID="tb_submitName" runat="server" Text='<%# Bind("submit_name") %>' />
+                        </td>
+                        <td style="text-align:left;">
+                             <asp:RequiredFieldValidator ID="rfv_submitName" runat="server" ErrorMessage="Please enter the submit name" CssClass="validatorError" ControlToValidate="tb_submitName"></asp:RequiredFieldValidator>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right;">
+                            Ingredient #1
+                        </td>
+                        <td style="text-align:left;">
+                             <asp:TextBox ID="ingredient1TextBox" runat="server" Text='<%# Bind("ingredient1") %>' />
+                        </td>
+                        <td style="text-align:left;">
+                             <asp:RequiredFieldValidator ID="rfv_ingredient1" runat="server" ErrorMessage="Please enter the first ingredient" CssClass="validatorError" ControlToValidate="ingredient1TextBox"></asp:RequiredFieldValidator>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right;">
+                            Ingredient #2
+                        </td>
+                        <td style="text-align:left;">
+                            <asp:TextBox ID="ingredient2TextBox" runat="server" Text='<%# Bind("ingredient2") %>' />
+                    </tr>
+                    <tr>
+                        <td style="text-align:right;">
+                            Ingredient #3
+                        </td>
+                        <td style="text-align:left;">
+                            <asp:TextBox ID="ingredient3TextBox" runat="server" Text='<%# Bind("ingredient3") %>' />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right;">
+                           Ingredient #4
+                        </td>
+                        <td style="text-align:left;">
+                             <asp:TextBox ID="ingredient4TextBox" runat="server" Text='<%# Bind("ingredient4") %>' />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right;">
+                            Ingredient #5
+                        </td>
+                        <td style="text-align:left;">
+                             <asp:TextBox ID="ingredient5TextBox" runat="server" Text='<%# Bind("ingredient5") %>' />
+                        </td>
+                    </tr>
+                  
+                    <tr>
+                        <td style="text-align:right;">
+                            Preparation
+                        </td>
+                        <td style="text-align:left;">
+                                <asp:TextBox ID="preparationTextBox" runat="server" Text='<%# Bind("preparation") %>' />
+                        </td>
+                        <td style="text-align:left;">
+                             <asp:RequiredFieldValidator ID="rfv_preparation" runat="server" ErrorMessage="Please enter the preparation" CssClass="validatorError" ControlToValidate="preparationTextBox"></asp:RequiredFieldValidator>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right;">
+                            Notes
+                        </td>
+                        <td style="text-align:left;">
+                            <asp:TextBox ID="notesTextBox" runat="server" Text='<%# Bind("notes") %>' />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right;">
+                            <asp:Button ID="Btn_Insert" runat="server" causeValidation="True" commandName="Insert" Text="Insert" />
+                        </td>
+                        <td style="text-align:right;">
+                            <asp:Button ID="Btn_cancelInsert" runat="server" causeValidation="False" commandName="Cancel" Text="Cancel" />
+                        </td>
+                    </tr>
+                </table>
+             
+            </InsertItemTemplate>
+            <ItemTemplate>
+            </ItemTemplate>
+        </asp:FormView>
         <br />
-    
-        <asp:DetailsView ID="dataView" runat="server" AutoGenerateRows="False" DataKeyNames="recipe_name" DataSourceID="Sql_HW6dataView" Height="50px" Width="290px" DefaultMode="Insert">
-            <Fields>
-                <asp:BoundField DataField="recipe_name" HeaderText="Recipe Name" ReadOnly="True" SortExpression="recipe_name" />
-                <asp:BoundField DataField="submit_name" HeaderText="Submitted By" SortExpression="submit_name" />
-                <asp:BoundField DataField="ingredient1" HeaderText="Ingredient #1" SortExpression="ingredient1" />
-                <asp:BoundField DataField="ingredient2" HeaderText="Ingredient #2" SortExpression="ingredient2" />
-                <asp:BoundField DataField="ingredient3" HeaderText="Ingredient #3" SortExpression="ingredient3" />
-                <asp:BoundField DataField="ingredient4" HeaderText="Ingredient #4" SortExpression="ingredient4" />
-                <asp:BoundField DataField="ingredient5" HeaderText="Ingredient #5" SortExpression="ingredient5" />
-                <asp:BoundField DataField="preparation" HeaderText="Preparation" SortExpression="preparation" />
-                <asp:BoundField DataField="notes" HeaderText="Notes" SortExpression="notes" />
-                <asp:CommandField CancelText="" ShowInsertButton="True" />
-            </Fields>
-        </asp:DetailsView>
     
     </div>
     </form>
