@@ -24,9 +24,9 @@
 &nbsp; |&nbsp;
             <asp:HyperLink ID="HyperLink2" runat="server" CssClass="menubar" NavigateUrl="~/NewRecipe.aspx">New Recipe</asp:HyperLink>
 &nbsp;|&nbsp;
-            <asp:HyperLink ID="HyperLink3" runat="server" CssClass="menubar">About Us</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink3" runat="server" CssClass="menubar" NavigateUrl="~/AboutUs.aspx">About Us</asp:HyperLink>
 &nbsp; |&nbsp;
-            <asp:HyperLink ID="HyperLink4" runat="server" CssClass="menubar">Contact</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink4" runat="server" CssClass="menubar" NavigateUrl="~/contact.aspx">Contact</asp:HyperLink>
         </p>
      </div>
     <div id="greidview">

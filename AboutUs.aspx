@@ -1,4 +1,4 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="Default - Copy.aspx.vb" Inherits="_Default" %>
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="AboutUs.aspx.vb" Inherits="_Default" %>
 
 <!DOCTYPE html>
 
@@ -26,67 +26,18 @@
 &nbsp;|&nbsp;
             <asp:HyperLink ID="HyperLink3" runat="server" CssClass="menubar">About Us</asp:HyperLink>
 &nbsp; |&nbsp;
-            <asp:HyperLink ID="HyperLink4" runat="server" CssClass="menubar">Contact</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink4" runat="server" CssClass="menubar" NavigateUrl="~/contact.aspx">Contact</asp:HyperLink>
         </p>
      </div>
-    <div id="greidview">
+    <div id="aboutus">
     
-        <asp:SqlDataSource ID="sql_hw6" runat="server" ConnectionString="<%$ ConnectionStrings:db_hw6 %>" DeleteCommand="DELETE FROM [sxiao4_hw6] WHERE [recipe_name] = @recipe_name" InsertCommand="INSERT INTO [sxiao4_hw6] ([recipe_name], [submit_name], [ingredient1], [ingredient2], [ingredient3], [ingredient4], [ingredient5], [preparation], [notes]) VALUES (@recipe_name, @submit_name, @ingredient1, @ingredient2, @ingredient3, @ingredient4, @ingredient5, @preparation, @notes)" SelectCommand="SELECT [recipe_name], [submit_name], [ingredient1], [ingredient2], [ingredient3], [ingredient4], [ingredient5], [preparation], [notes] FROM [sxiao4_hw6]" UpdateCommand="UPDATE [sxiao4_hw6] SET [submit_name] = @submit_name, [ingredient1] = @ingredient1, [ingredient2] = @ingredient2, [ingredient3] = @ingredient3, [ingredient4] = @ingredient4, [ingredient5] = @ingredient5, [preparation] = @preparation, [notes] = @notes WHERE [recipe_name] = @recipe_name">
-            <DeleteParameters>
-                <asp:Parameter Name="recipe_name" Type="String" />
-            </DeleteParameters>
-            <InsertParameters>
-                <asp:Parameter Name="recipe_name" Type="String" />
-                <asp:Parameter Name="submit_name" Type="String" />
-                <asp:Parameter Name="ingredient1" Type="String" />
-                <asp:Parameter Name="ingredient2" Type="String" />
-                <asp:Parameter Name="ingredient3" Type="String" />
-                <asp:Parameter Name="ingredient4" Type="String" />
-                <asp:Parameter Name="ingredient5" Type="String" />
-                <asp:Parameter Name="preparation" Type="String" />
-                <asp:Parameter Name="notes" Type="String" />
-            </InsertParameters>
-            <UpdateParameters>
-                <asp:Parameter Name="submit_name" Type="String" />
-                <asp:Parameter Name="ingredient1" Type="String" />
-                <asp:Parameter Name="ingredient2" Type="String" />
-                <asp:Parameter Name="ingredient3" Type="String" />
-                <asp:Parameter Name="ingredient4" Type="String" />
-                <asp:Parameter Name="ingredient5" Type="String" />
-                <asp:Parameter Name="preparation" Type="String" />
-                <asp:Parameter Name="notes" Type="String" />
-                <asp:Parameter Name="recipe_name" Type="String" />
-            </UpdateParameters>
-        </asp:SqlDataSource>
+        <p>
+    
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquet, tellus sit amet feugiat euismod, velit lectus pellentesque nisi, non eleifend quam ipsum at arcu. Sed semper mi a tristique porttitor. Morbi rhoncus diam dui, a ultricies eros mollis sed. Donec facilisis blandit elit ut ultrices. Nullam laoreet volutpat dolor in convallis. Ut ornare mollis odio at luctus. Morbi nec blandit justo. Donec porta sagittis euismod. Cras quis congue dui. Nunc at lorem ac diam vestibulum placerat quis eu nibh. In hac habitasse platea dictumst. Etiam vel lorem nec justo suscipit ornare. Sed risus urna, gravida nec convallis eu, viverra nec sem. Sed eget mauris magna. Sed vulputate tortor in tempus fringilla. Donec in commodo tellus. Ut laoreet ut lectus ac vehicula. Duis velit nulla, suscipit ut urna ac, facilisis elementum sapien. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut dui quam, imperdiet ornare est non, accumsan vulputate justo. Vestibulum sit amet erat a nunc 
+        consectetur pellentesque. Aenean imperdiet tellus nec augue eleifend condimentum.<br />
     
         <br />
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="recipe_name" DataSourceID="sql_hw6" CellPadding="3" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellSpacing="2" CssClass="greidview1" HorizontalAlign="Center" ViewStateMode="Disabled" Width="592px">
-            <Columns>
-                <asp:BoundField DataField="recipe_name" HeaderText="Recipe Name" ReadOnly="True" SortExpression="recipe_name" />
-                <asp:BoundField DataField="submit_name" HeaderText="Submitted By" SortExpression="submit_name" />
-                <asp:HyperLinkField DataNavigateUrlFields="recipe_name" DataNavigateUrlFormatString="details_view.aspx?recipe_name={0}" HeaderText="Submitted By" Text="Details View" />
-            </Columns>
-            
-         
-              <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
-            
-         
-              <HeaderStyle BackColor="#FFFF99" Font-Bold="True" ForeColor="#696969" />
-            <PagerStyle ForeColor="#8C4510" HorizontalAlign="Center" />
-            <RowStyle BackColor="#F08080" ForeColor="white" />
-          
-            <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
-          
-            <SortedAscendingCellStyle BackColor="#FFF1D4" />
-            <SortedAscendingHeaderStyle BackColor="#B95C30" />
-            <SortedDescendingCellStyle BackColor="#F1E5CE" />
-            <SortedDescendingHeaderStyle BackColor="#93451F" />
-            
-         
-        </asp:GridView>
-    
-        <br />
-    
+    </p>
     </div>
     </form>
 </body>
