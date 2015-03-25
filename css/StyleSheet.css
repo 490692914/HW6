@@ -6,3 +6,17 @@
 }
 
 .validatorError {color: red; font-weight:bold;}
+
+#Header1 { font-weight:bold;color:brown;}
+
+#Header2 { color:brown;}
+
+#top {  text-align:center; width: 700px ; margin-left: auto ; margin-right: auto ;}
+
+#greidview { width: 1000px ; margin-left: auto ; margin-right: auto ; }
+.greidview1 {text-align:center;}
+.menubar {
+    text-decoration:none;
+    color:brown;
+}
+
