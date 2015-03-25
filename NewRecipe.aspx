@@ -62,6 +62,8 @@
              </EditItemTemplate>
             <InsertItemTemplate>
                 <table>
+                    <col style="background-color: coral; color: #ffffff" />
+                    <col span="2" style="background-color: white; color: #ffffff;" />
                     <tr>
                         <td style="text-align:right;">
                             Recipe Name
@@ -147,7 +149,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="text-align:right;">
+                        <td style="background-color: white;text-align:right;">
                             <asp:Button ID="Btn_Insert" runat="server" causeValidation="True" commandName="Insert" Text="Insert" />
                         </td>
                         <td style="text-align:right;">

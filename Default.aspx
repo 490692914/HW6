@@ -60,7 +60,7 @@
         </asp:SqlDataSource>
     
         <br />
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="recipe_name" DataSourceID="sql_hw6" CellPadding="3" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellSpacing="2" CssClass="greidview1" HorizontalAlign="Center" ViewStateMode="Disabled" Width="592px">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="recipe_name" DataSourceID="sql_hw6" CellPadding="3" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellSpacing="2" CssClass="greidview1" HorizontalAlign="Center" ViewStateMode="Disabled" Width="592px" AllowPaging="True">
             <Columns>
                 <asp:BoundField DataField="recipe_name" HeaderText="Recipe Name" ReadOnly="True" SortExpression="recipe_name" />
                 <asp:BoundField DataField="submit_name" HeaderText="Submitted By" SortExpression="submit_name" />
