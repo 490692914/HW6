@@ -28,7 +28,7 @@
             <asp:HyperLink ID="HyperLink4" runat="server" CssClass="menubar" NavigateUrl="~/contact.aspx">Contact</asp:HyperLink>
         </p>
      </div>
-    <div>
+    <div ID="formview_New">
     
         <asp:SqlDataSource ID="Sql_HW6dataView" runat="server" ConnectionString="<%$ ConnectionStrings:db_hw6 %>" DeleteCommand="DELETE FROM [sxiao4_hw6] WHERE [recipe_name] = @recipe_name" InsertCommand="INSERT INTO [sxiao4_hw6] ([recipe_name], [submit_name], [ingredient1], [ingredient2], [ingredient3], [ingredient4], [ingredient5], [preparation], [notes]) VALUES (@recipe_name, @submit_name, @ingredient1, @ingredient2, @ingredient3, @ingredient4, @ingredient5, @preparation, @notes)" SelectCommand="SELECT * FROM [sxiao4_hw6]" UpdateCommand="UPDATE [sxiao4_hw6] SET [submit_name] = @submit_name, [ingredient1] = @ingredient1, [ingredient2] = @ingredient2, [ingredient3] = @ingredient3, [ingredient4] = @ingredient4, [ingredient5] = @ingredient5, [preparation] = @preparation, [notes] = @notes WHERE [recipe_name] = @recipe_name">
             <DeleteParameters>
@@ -57,12 +57,12 @@
                 <asp:Parameter Name="recipe_name" Type="String" />
             </UpdateParameters>
         </asp:SqlDataSource>
-        <asp:FormView ID="FormView1" runat="server" DataKeyNames="recipe_name" DataSourceID="Sql_HW6dataView" DefaultMode="Insert" Width="529px">
+        <asp:FormView ID="FormView1" runat="server" DataKeyNames="recipe_name" DataSourceID="Sql_HW6dataView" DefaultMode="Insert" Width="498px" CssClass="newrecipeForm">
             <EditItemTemplate>
              </EditItemTemplate>
             <InsertItemTemplate>
                 <table>
-                    <col style="background-color: coral; color: #ffffff" />
+                    <col style="background-color: #F08080; color: #ffffff;width:auto" />
                     <col span="2" style="background-color: white; color: #ffffff;" />
                     <tr>
                         <td style="text-align:right;">

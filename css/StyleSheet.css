@@ -22,4 +22,6 @@
 
 
 #detailview { width: 1000px ; margin-left: auto ; margin-right: auto ; }
-.detailviewField {text-align:right;}
+#formview_New{ width: 1000px ; margin-left: auto ; margin-right: auto ; }
+.detailviewField {text-align:right;margin-left:auto; margin-right: auto ;}
+.newrecipeForm{text-align:right;margin-left:400px; margin-right: auto ;}
