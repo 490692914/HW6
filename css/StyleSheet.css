@@ -21,3 +21,5 @@
 #aboutus {text-align:center; width: 600px ; padding:5px; margin-left: auto ; margin-right: auto ; border:solid;border-width:thin; border-color:coral;}
 
 
+#detailview { width: 1000px ; margin-left: auto ; margin-right: auto ; }
+.detailviewField {text-align:right;}
