@@ -77,7 +77,7 @@
                 <asp:Label ID="recipe_nameLabel1" runat="server" Text='<%# Eval("recipe_name") %>' />
                     </td>
                          <td style="text-align:left;">
-                             <asp:RequiredFieldValidator ID="rfv_recipeName1" runat="server" ErrorMessage="Please enter the receipe name" CssClass="validatorError" ControlToValidate="recipe_nameLabel1"></asp:RequiredFieldValidator>
+                            
                         </td>
                     </tr>
                 
@@ -89,8 +89,9 @@
                 <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("submit_name") %>' />
                     </td>
                          <td style="text-align:left;">
-                             <asp:RequiredFieldValidator ID="rfv_submitName" runat="server" ErrorMessage="Please enter the submit name" CssClass="validatorError" ControlToValidate="TextBox1"></asp:RequiredFieldValidator>
-                        </td>
+                       <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1" CssClass="validatorError" ErrorMessage="Please enter the submit name"></asp:RequiredFieldValidator>                       
+
+                         </td>
                     </tr>
 
                       <tr>
@@ -101,8 +102,9 @@
                 <asp:TextBox ID="ingredient1TextBox" runat="server" Text='<%# Bind("ingredient1") %>' />
                     </td>
                            <td style="text-align:left;">
-                             <asp:RequiredFieldValidator ID="rfv_ingredient1" runat="server" ErrorMessage="Please enter the first ingredient" CssClass="validatorError" ControlToValidate="ingredient1TextBox"></asp:RequiredFieldValidator>
-                        </td>
+                             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="ingredient1TextBox" CssClass="validatorError" ErrorMessage="Please enter the first ingredient"></asp:RequiredFieldValidator>  
+ 
+                           </td>
                     </tr>
 
                       <tr>
@@ -147,7 +149,7 @@
                   <td style="text-align:left;">
                 <asp:TextBox ID="preparationTextBox" runat="server" Text='<%# Bind("preparation") %>' />
                       <td style="text-align:left;">
-                             <asp:RequiredFieldValidator ID="rfv_preparation" runat="server" ErrorMessage="Please enter the preparation" CssClass="validatorError" ControlToValidate="preparationTextBox"></asp:RequiredFieldValidator>
+                             <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Please enter the preparation" CssClass="validatorError" ControlToValidate="preparationTextBox"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                        <tr>
@@ -268,6 +270,7 @@
            </table>
             </ItemTemplate>
         </asp:FormView>
+        
         <br />
     
     </div>

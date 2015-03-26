@@ -6,10 +6,31 @@
 
 <head runat="server">
     <title>Web Contact Form</title>
+    <link rel="stylesheet" type="text/css" href="~/css/StyleSheet.css" />
 </head>
 
 <body>
-    <form id="form1" runat="server">
+     <div id="top">
+        <p>
+            <br />
+            <asp:Label ID="Header1" runat="server" Text="Wicked Easy Recipes"></asp:Label>
+         </p>
+        <p>  
+            <asp:Label ID="Header2" runat="server" Text="Using 5 Ingredients or Less!"></asp:Label>
+        </p>
+
+        <p>
+            <asp:HyperLink ID="HyperLink1" runat="server" CssClass="menubar" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>
+&nbsp; |&nbsp;
+            <asp:HyperLink ID="HyperLink2" runat="server" CssClass="menubar" NavigateUrl="~/NewRecipe.aspx">New Recipe</asp:HyperLink>
+&nbsp;|&nbsp;
+            <asp:HyperLink ID="HyperLink3" runat="server" CssClass="menubar" NavigateUrl="~/AboutUs.aspx">About Us</asp:HyperLink>
+&nbsp; |&nbsp;
+            <asp:HyperLink ID="HyperLink4" runat="server" CssClass="menubar" NavigateUrl="~/contact.aspx">Contact</asp:HyperLink>
+        </p>
+     </div>
+    <div id="contact">
+    <form id="form1" runat="server" class="form1" style="border: thin solid #FF5050; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: small;">
 
         <!-- Check to see if you are in postback.  If not, display the contact form. -->
         <% If Not IsPostBack Then%>
@@ -48,5 +69,6 @@
         <%End If%>
 
     </form>
+        </div>
 </body>
 </html>
